@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load bootstrap4 %}
+<style>
+  .form {
+    margin-top: 2%;
+  }
+</style>
+<div class="form">
+  <form method="post" class="form">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  {% buttons %}
+    <button type="submit" class="btn btn-primary">
+      Отправить
+    </button>
+  {% endbuttons %}
+</form>
+</div>
+
+
+
+{% endblock content %}
