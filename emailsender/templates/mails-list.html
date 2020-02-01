@@ -5,18 +5,14 @@
     <div class="row">
         <div class="col-sm">
             <h2>Ожидают отправки</h2>
-            {% for mail in mails %}
-            {% if mail.seconds > 0 %}
+            {% for mail in awaiting %}
             <p>{{ mail.email }}</p>
-            {% endif %}
             {% endfor %}
         </div>
         <div class="col-sm">
             <h2>Отправленные</h2>
-            {% for mail in mails %}
-            {% if mail.seconds == 0%}
+            {% for mail in sended %}
             <p>{{ mail.email }}</p>
-            {% endif %}
             {% endfor %}
         </div>
     </div>
