@@ -23,6 +23,7 @@ class AwaitngMailsView(ListView):
     model = Email
     template_name = 'mails-list.html'
     context_object_name = 'mails'
+    paginate_by = 20
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(AwaitngMailsView, self).get_context_data()
